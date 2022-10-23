@@ -1,0 +1,110 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\main.c" -xcl_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.xcl" -macro_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\main.c" -o "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\Obj\App" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.tmp"
+  rspfile_name = E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.xcl.rsp
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.xcl : COMPILER_XCL 
+  xclcommand = -source_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\HAL\LED.c" -xcl_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.xcl" -macro_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\HAL\LED.c" -o "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\Obj\HAL" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.tmp"
+  rspfile_name = E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.xcl.rsp
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.xcl : COMPILER_XCL 
+  xclcommand = -source_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\GPIO.c" -xcl_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.xcl" -macro_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\GPIO.c" -o "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\Obj\Mcal" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.tmp"
+  rspfile_name = E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.xcl.rsp
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.xcl : COMPILER_XCL 
+  xclcommand = -source_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\GPT.c" -xcl_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.xcl" -macro_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\GPT.c" -o "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\Obj\Mcal" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.tmp"
+  rspfile_name = E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.xcl.rsp
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.xcl : COMPILER_XCL 
+  xclcommand = -source_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\NVIC.c" -xcl_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.xcl" -macro_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\NVIC.c" -o "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\Obj\Mcal" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.tmp"
+  rspfile_name = E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.xcl.rsp
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.xcl : COMPILER_XCL 
+  xclcommand = -source_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\SysTick.c" -xcl_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.xcl" -macro_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\SysTick.c" -o "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\Obj\Mcal" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.tmp"
+  rspfile_name = E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.xcl.rsp
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.xcl : COMPILER_XCL 
+  xclcommand = -source_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Services\LED_PWM.c" -xcl_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.xcl" -macro_file "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Services\LED_PWM.c" -o "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\Obj\Services" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.tmp"
+  rspfile_name = E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.xcl.rsp
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.pbi : INDEXER E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.xcl |  $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\main.c
+  flags = "-out=E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.pbi" -f "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.xcl"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.pbi : INDEXER E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.xcl |  $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\HAL\LED.c
+  flags = "-out=E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.pbi" -f "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.xcl"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.pbi : INDEXER E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.xcl |  $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\GPIO.c
+  flags = "-out=E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.pbi" -f "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.xcl"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.pbi : INDEXER E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.xcl |  $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\GPT.c
+  flags = "-out=E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.pbi" -f "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.xcl"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.pbi : INDEXER E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.xcl |  $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\NVIC.c
+  flags = "-out=E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.pbi" -f "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.xcl"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.pbi : INDEXER E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.xcl |  $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Mcal\SysTick.c
+  flags = "-out=E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.pbi" -f "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.xcl"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.pbi : INDEXER E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.xcl |  $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Services\LED_PWM.c
+  flags = "-out=E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.pbi" -f "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.xcl"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project.pbw : MAKEBROWSE E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project.pbd
+  flags = "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project.pbd" -output "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project.pbw"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part0.pbi : PDBLINK E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.pbi |  $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.pbi $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.pbi
+  flags = -M "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part0.pbi" "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\App\main.pbi" "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\HAL\LED.pbi" "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPIO.pbi"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part1.pbi : PDBLINK E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.pbi |  $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.pbi $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.pbi
+  flags = -M "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part1.pbi" "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\GPT.pbi" "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\NVIC.pbi" "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Mcal\SysTick.pbi"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part2.pbi : PDBLINK E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.pbi
+  flags = -M "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part2.pbi" "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\Services\LED_PWM.pbi"
+
+build E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project.pbd : PDBLINK E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part0.pbi |  $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part1.pbi $
+E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part2.pbi
+  flags = -M "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project.pbd" "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part0.pbi" "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part1.pbi" "E$:\EG$ FWD\ARM\Project\__workspace\Project\First_Project\Debug\BrowseInfo\First$ Project_part2.pbi"
+

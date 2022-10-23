@@ -1,0 +1,60 @@
+# ninja log v5
+0	228	6881682728207085	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/main.o	c0dc2d9591bb172d
+230	654	6881682732461058	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Exe/First Project.out	14ecb17bc1e50aa0
+0	123	6881688526663296	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/App/main.o	7e06111055d47d0c
+0	123	6881688526663296	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/main.o	7e06111055d47d0c
+7	56	6881690977256950	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/App/main.o	37ba7659e1cc5aa7
+15	216	6881690978837479	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPIO.o	d303d5d719f521ab
+221	259	6881690979308768	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Exe/First Project.out	fd79828993c949b5
+0	168	6881701256072323	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPIO.o	d303d5d719f521ab
+1	43	6881701322469028	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/App/main.o	37ba7659e1cc5aa7
+1	42	6881701367329639	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Exe/First Project.out	fd79828993c949b5
+0	307	6881715040970768	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/App/main.o	37ba7659e1cc5aa7
+0	43	6881715450885797	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/App/main.o	37ba7659e1cc5aa7
+1	169	6881715558914199	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPIO.o	d303d5d719f521ab
+171	539	6881715562646335	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Exe/First Project.out	fd79828993c949b5
+0	92	6881748092384625	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/SysTick.o	d48ca255948b0594
+1	84	6881749543225818	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/SysTick.o	d48ca255948b0594
+0	153	6881751555273943	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/SysTick.o	d48ca255948b0594
+0	121	6881763150075314	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPT.o	a3b40fa90744bc68
+1	96	6881763610798442	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPT.o	a3b40fa90744bc68
+1	305	6881765940751445	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPT.o	a3b40fa90744bc68
+1	76	6881766879019150	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/App/main.o	37ba7659e1cc5aa7
+9	188	6881766880146158	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPT.o	a3b40fa90744bc68
+16	191	6881766880176075	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPIO.o	d303d5d719f521ab
+0	398	6881767492875551	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/SysTick.o	d48ca255948b0594
+1	88	6881767528939571	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPT.o	a3b40fa90744bc68
+91	239	6881767530485634	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Exe/First Project.out	364aa887efaa47ee
+0	123	6881768087497059	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPT.o	a3b40fa90744bc68
+1	267	6881821320333838	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Services/PWM.o	ff8008ae4cf9043d
+1	85	6881822499638231	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Services/PWM.o	ff8008ae4cf9043d
+0	44	6881824335380397	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/App/main.o	37ba7659e1cc5aa7
+1	186	6881824377384708	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/HAL/LED.o	3c8819befe29731f
+22	199	6881824377514382	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPT.o	a3b40fa90744bc68
+15	210	6881824377624085	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/NVIC.o	da24f45e8b7071ed
+29	213	6881824377604140	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/SysTick.o	d48ca255948b0594
+8	312	6881824378641365	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPIO.o	d303d5d719f521ab
+0	85	6881824555653326	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Services/LED_PWM.o	b19a3dd6463fc113
+0	77	6881825100013169	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/HAL/LED.o	3c8819befe29731f
+1	67	6881825141314818	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/App/main.o	37ba7659e1cc5aa7
+15	121	6881825141833089	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/HAL/LED.o	3c8819befe29731f
+22	136	6881825141932823	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/SysTick.o	d48ca255948b0594
+30	149	6881825142072457	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/NVIC.o	da24f45e8b7071ed
+36	158	6881825142182159	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Services/LED_PWM.o	b19a3dd6463fc113
+70	171	6881825142371650	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPT.o	a3b40fa90744bc68
+9	211	6881825142760607	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPIO.o	d303d5d719f521ab
+214	250	6881825143169519	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Exe/First Project.out	e647d40e6a4a8b81
+1	149	6882228224064119	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/App/main.o	37ba7659e1cc5aa7
+152	763	6882228230212344	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Exe/First Project.out	e647d40e6a4a8b81
+9	149	6882231555915539	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/App/main.o	37ba7659e1cc5aa7
+6	335	6882231557750639	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/HAL/LED.o	3c8819befe29731f
+152	339	6882231557750639	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Services/LED_PWM.o	b19a3dd6463fc113
+19	355	6882231557870304	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPT.o	a3b40fa90744bc68
+13	358	6882231557870304	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/SysTick.o	d48ca255948b0594
+1	361	6882231557880279	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPIO.o	d303d5d719f521ab
+23	396	6882231558388938	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/NVIC.o	da24f45e8b7071ed
+399	439	6882231558847696	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Exe/First Project.out	e647d40e6a4a8b81
+0	81	6882233601753581	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Mcal/GPT.o	a3b40fa90744bc68
+1	38	6882233619124703	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Exe/First Project.out	e647d40e6a4a8b81
+1	152	6882235387872140	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Obj/Services/LED_PWM.o	b19a3dd6463fc113
+155	190	6882235388291208	E:/EG FWD/ARM/Project/__workspace/Project/First_Project/Debug/Exe/First Project.out	e647d40e6a4a8b81
