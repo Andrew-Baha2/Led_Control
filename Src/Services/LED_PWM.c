@@ -19,6 +19,8 @@
 #include "../Mcal/GPIO.h"
 #include "../Mcal/GPT.h"
 #include "../Mcal/NVIC.h"
+#include "../Mcal/SYSTICK.h"
+#include "../Common/std_types.h"
 
 /**********************************************************************************************************************
 *  LOCAL MACROS CONSTANT\FUNCTION
@@ -51,26 +53,37 @@
 
 void Led_Init(void)
 {
-    GPT_ConfigType Timer0Cfg = {TIMER0, 12500, 0xFFFFFFFF, CONTINUOUS};
+  //  GPT_ConfigType Timer0Cfg = {TIMER0, 12500, 0xFFFFFFFF, CONTINUOUS};
 
-    Gpt_Init(&Timer0Cfg);
-    Gpt_DisableIntNotification(TIMER0);
+  //  Gpt_Init(&Timer0Cfg);
+  //  Gpt_DisableIntNotification(TIMER0);
 
     NVIC_Init();
 
     GPIO_initPin(PORTF_ID, PIN1_ID, PIN_OUTPUT, NO_PULL);
     Led_init(PORTF_ID, PIN1_ID, LOGIC_HIGH);
+		
+		// set sw1 and sw2 as input
+		GPIO_initPin(PORTF_ID,PIN0_ID, PIN_INPUT , PULL_DOWN);
+		GPIO_initPin(PORTF_ID,PIN4_ID, PIN_INPUT , PULL_DOWN);
+		
+		SystickDisable();
+		SystickEnable ();
 }
 
 
 void Led_Pwm(uint16 OnCounts,uint16 OffCounts)
 {
+	if (OnCounts>0){
     Led_init(PORTF_ID, PIN1_ID, LOGIC_LOW);
-    Gpt_StartTimer(TIMER0, OnCounts);
-
+    //Gpt_StartTimer(TIMER0, OnCounts);
+		SysDelays(OnCounts);
+	}
+	if (OffCounts>0){
     Led_init(PORTF_ID, PIN1_ID, LOGIC_HIGH);
-    Gpt_StartTimer(TIMER0, OffCounts);
-
+   // Gpt_StartTimer(TIMER0, OffCounts);
+		SysDelays(OffCounts);
+	}
 }
 
 /**********************************************************************************************************************
